@@ -1,5 +1,5 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
 /* CSS Reset */
 *,
@@ -64,8 +64,8 @@ h6 {
 /* Styling */
 :root {
   --default-fonts:
-    "Roboto", system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
+    "Roboto", system-ui, "Segoe UI", Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 body {
@@ -85,8 +85,14 @@ h3 {
   font-weight: 600;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Playfair Display", var(--default-fonts);
+}
+
+.tablet {
+  display: none;
 }
 
 .header {
@@ -109,8 +115,9 @@ h1, h2, h3 {
 .profile h2 {
   position: absolute;
   bottom: 0;
-  margin: 0.1em;
-  font-size: 3em;
+  margin: 0.3em;
+  margin-left: 0.5em;
+  font-size: 2.7rem;
   color: white;
   font-weight: 400;
 }
@@ -144,14 +151,13 @@ h1, h2, h3 {
 .about .icon {
   width: 30px;
   height: auto;
-  display: inline;
   margin-top: 1em;
   margin-bottom: 5em;
 }
 
 /**/
 
-.projects{
+.projects {
   flex: 1;
   margin-bottom: 10em;
 }
@@ -254,62 +260,167 @@ h1, h2, h3 {
   height: auto;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 768px) and (max-width: 1023px) {
+  .tablet {
+    display: block;
+    float: left;
+    padding: 0;
+    margin-left: -50px;
+    margin-top: -75px;
+    margin-right: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .profile h2 {
+    z-index: 1;
+    position: absolute;
+    text-wrap: nowrap;
+    transform: translate(320px, -230px);
+  }
+
+  .header {
+    flex-direction: row;
+  }
+
+  .header picture {
+    display: none;
+  }
+
+  .header .about {
+    margin: 6em;
+    max-width: 600px;
+    min-height: 475px;
+    display: block;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-size: 1.1rem;
+    text-wrap: pretty;
+  }
+
+  .about h1 {
+    padding-right: 25px;
+    padding-top: 2em;
+  }
+
+  .about p {
+    padding: 2em;
+    padding-top: 1em;
+    margin: 0;
+  }
+
+  .about .icons {
+    display: none;
+  }
+
+  .projects h1 {
+    text-align: left;
+    padding-left: 3em;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact {
+    display: flex;
+    padding: 3em;
+    justify-content: center;
+    gap: 3em;
+  }
+
+  .info h1,
+  .info .icons {
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tablet {
+    display: none;
+  }
+
   .header {
     background-color: rgb(255, 255, 255);
     background: -webkit-linear-gradient(
       -75deg,
-      rgb(10, 145, 177) 40%,
-      rgb(255, 255, 255) 40.2%
+      rgb(10, 145, 177) 55.2%,
+      rgb(255, 255, 255) 55.3%
     );
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    padding: 3em 5em;
+    padding-bottom: 10em;
   }
-  
+
   .profile {
     position: relative;
   }
-  
-  .profile h2 {
-    margin: 0.3em;
-    font-size: 3em;
-    color: white;
-    font-weight: 400;
-  }
-  
+
   .profile picture {
-    margin: 1em;
-    border: none;
+    margin: 0;
+    min-width: 400px;
+  }
+
+  .profile h2 {
+    margin-bottom: 0;
+    margin-left: 0;
+    font-size: 3rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    text-wrap: nowrap;
+  }
+
+  .header .about {
+    margin: 0;
+    background-color: white;
+    max-width: 600px;
+    padding: 2em 1em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
-  
-  .header .about {
-    margin: 1em;
-    background-color: white;
-  }
-  
+
   .about h1 {
-    text-align: center;
+    text-align: start;
+    margin-bottom: 0.5em;
   }
-  
-  .about p {
-    font-size: 1.05em;
-    color: rgb(94, 94, 94);
-    margin-top: 0.5em;
-  }
-  
+
   .about .icons {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
+    width: 100%;
+    justify-content: end;
+    margin-top: 3em;
+    padding-right: 1em;
   }
-  
+
   .about .icon {
-    width: 30px;
-    height: auto;
-    display: inline;
-    margin-top: 1em;
-    margin-bottom: 5em;
+    margin: 0;
+  }
+
+  .projects {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .projects h1 {
+    text-align: start;
+    padding-left: 1.5em;
+  }
+
+  .project-grid {
+    min-width: 1100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5em;
+  }
+
+  .contact {
+    display: flex;
+    padding: 3em;
+    min-width: 1100px;
+    justify-content: center;
+    gap: 3em;
+  }
+
+  .info h1,
+  .info .icons {
+    align-self: flex-start;
   }
 }

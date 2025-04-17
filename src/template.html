@@ -11,12 +11,15 @@
   <header class="header">
     <div class="profile">
       <picture>
-        <source media="(max-width: 599px)" srcset="https://placehold.co/200x350/000000/FFFFFF/png">
+        <source media="(max-width: 767px)" srcset="https://placehold.co/200x350/000000/FFFFFF/png">
+        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://placehold.co/275x325/000000/FFFFFF/png">
+        <source media="(min-width: 1024px)" srcset="https://placehold.co/400x450/000000/FFFFFF/png">
         <img src="https://placehold.co/400x450/000000/FFFFFF/png" alt="Ashley Williams, blog author">
-        <h2>Ashley Williams</h2>
       </picture>
+      <h2>Ashley Williams</h2>
     </div>
     <div class="about">
+      <img class="tablet" src="https://placehold.co/325x400/000000/FFFFFF/png">
       <h1>About me</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -142,7 +145,12 @@
             alt="X profile" /></a>
       </div>
     </div>
-    <img src="https://placehold.co/400x300/000000/FFFFFF/png" alt="Ashley Williams, blog author">
+    <picture>
+      <source media="(max-width: 767px)" srcset="https://placehold.co/400x300/000000/FFFFFF/png">
+      <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://placehold.co/350x500/000000/FFFFFF/png">
+      <source media="(min-width: 1024px)" srcset="https://placehold.co/500x400/000000/FFFFFF/png">
+      <img src="https://placehold.co/500x400/000000/FFFFFF/png" alt="Ashley Williams, blog author">
+    </picture>
   </footer>
 </body>
 
